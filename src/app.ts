@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("First project using Docker!").status(200);
+  res.send("First project running on Docker Container!").status(200);
 });
 
 app.listen(port, () => {
