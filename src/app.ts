@@ -1,14 +1,13 @@
 import express, { Request, Response } from "express";
-import dotenv from "dotenv";
-
-dotenv.config();
+import userRouter from "./routes";
+import * as repository from "./repositories/repository";
 const app = express();
-const port = process.env.PORT || 8080;
+
+app.use(express.json());
+app.use("/api", userRouter);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Project running on Docker Container!").status(200);
 });
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+export default app;
