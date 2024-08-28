@@ -2,7 +2,7 @@
 
 FROM node:alpine
 WORKDIR /app
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json prisma ./
 RUN npm install
 COPY . .
 RUN npm run build

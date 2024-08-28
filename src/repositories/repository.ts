@@ -5,7 +5,7 @@ interface BodyType {
   name: string;
 }
 
-export const createUser = async (body: BodyType): Promise<Users> => {
+export const createUser = async (body: BodyType): Promise<Users | null> => {
   const { name } = body;
   const result = await prismaClient.users.create({
     data: {
