@@ -1,6 +1,5 @@
 import express, { Request, Response } from "express";
 import userRouter from "./routes";
-import * as repository from "./repositories/repository";
 const app = express();
 
 app.use(express.json());
