@@ -2,7 +2,9 @@ CREATE DATABASE test;
 
 \c test;
 
-CREATE TABLE users (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
-)
+CREATE TABLE "Users" (
+    "id" SERIAL NOT NULL,
+    "name" VARCHAR(255) NOT NULL,
+
+    CONSTRAINT "Users_pkey" PRIMARY KEY ("id")
+);
