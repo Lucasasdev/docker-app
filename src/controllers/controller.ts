@@ -5,7 +5,7 @@ export const postUser = async (req: Request, res: Response) => {
   const body = req.body;
   const result = await repository.createUser(body);
   if (result) {
-    res.sendStatus(200);
+    return res.sendStatus(200);
   }
-  res.sendStatus(400);
+  return res.sendStatus(400);
 };
