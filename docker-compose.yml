@@ -20,7 +20,7 @@ services:
       - 2500:3000
     depends_on:
       - postgresdb
-    restart: "on-failure"
+    restart: "no"
 
 volumes:
   postgres-test-volume:
